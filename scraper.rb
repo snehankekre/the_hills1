@@ -1,5 +1,19 @@
 require 'mechanize'
 require 'scraperwiki'
+require 'logger'
+
+class Net::HTTP::Persistent
+  module DisableSslReuse
+    def connection_for(uri)
+      connection = super
+      connection.instance_variable_set(:@ssl_session, nil)
+      return connection
+    end
+  end
+
+  prepend DisableSslReuse   # https://qiita.com/yhara/items/01a999ddc81c037562d3
+end
+
 
 agent = Mechanize.new
 agent.ssl_version = :TLSv1
