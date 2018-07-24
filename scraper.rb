@@ -1,6 +1,5 @@
 require 'mechanize'
 require 'scraperwiki'
-require 'logger'
 
 '''class Net::HTTP::Persistent
   module DisableSslReuse
