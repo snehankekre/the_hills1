@@ -2,7 +2,7 @@ require 'mechanize'
 require 'scraperwiki'
 require 'logger'
 
-class Net::HTTP::Persistent
+'''class Net::HTTP::Persistent
   module DisableSslReuse
     def connection_for(uri)
       connection = super
@@ -12,7 +12,7 @@ class Net::HTTP::Persistent
   end
 
   include DisableSslReuse   # https://qiita.com/yhara/items/01a999ddc81c037562d3
-end
+end'''
 
 
 agent = Mechanize.new
