@@ -15,7 +15,7 @@ end'''
 
 
 agent = Mechanize.new
-agent.ssl_version = :TLSv1_client
+agent.ssl_version = :TLSv1_server
 enquiry_url = "https://epathway.thehills.nsw.gov.au/ePathway/Production/Web/GeneralEnquiry/EnquiryLists.aspx"
 
 # Get the main page and ask for DAs
