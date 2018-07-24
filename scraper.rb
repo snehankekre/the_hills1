@@ -2,7 +2,7 @@ require 'mechanize'
 require 'scraperwiki'
 
 agent = Mechanize.new
-agent.ssl_version = :SSLv23
+agent.ssl_version = :TLSv1_1
 enquiry_url = "https://epathway.thehills.nsw.gov.au/ePathway/Production/Web/GeneralEnquiry/EnquiryLists.aspx"
 
 # Get the main page and ask for DAs
