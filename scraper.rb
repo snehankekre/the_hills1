@@ -16,7 +16,7 @@ end'''
 
 #agent = Mechanize.new
 agent = OpenSSL::SSL::SSLContext.new
-agent.ssl_version = :TLSv1_2
+agent.ssl_version = :"TLSv1.2"
 #agent.ssl_version = :SSLv3_server
 enquiry_url = "https://epathway.thehills.nsw.gov.au/ePathway/Production/Web/GeneralEnquiry/EnquiryLists.aspx"
 
