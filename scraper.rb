@@ -11,7 +11,7 @@ class Net::HTTP::Persistent
     end
   end
 
-  prepend DisableSslReuse   # https://qiita.com/yhara/items/01a999ddc81c037562d3
+  include DisableSslReuse   # https://qiita.com/yhara/items/01a999ddc81c037562d3
 end
 
 
